@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pranav Singh — Computer Science student at VIT Vellore. Portfolio showcasing education, skills, projects, and achievements.">
+    <meta name="author" content="Pranav Singh">
+    <meta name="keywords" content="Pranav Singh, Portfolio, Web Developer, VIT Vellore, Computer Science">
+    <title>Pranav Singh | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>PS<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+                <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-orb hero-orb--1"></div>
+            <div class="hero-orb hero-orb--2"></div>
+            <div class="hero-orb hero-orb--3"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-greeting animate-in">Hello, I'm</p>
+            <h1 class="hero-name animate-in animate-in--delay-1">
+                Pranav <span class="gradient-text">Singh</span>
+            </h1>
+            <p class="hero-tagline animate-in animate-in--delay-2">
+                Computer Science Student · Aspiring Developer · Problem Solver
+            </p>
+            <div class="hero-actions animate-in animate-in--delay-3">
+                <a href="#projects" class="btn btn--primary">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn--outline">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-socials animate-in animate-in--delay-4">
+                <a href="https://github.com/pranav-singh2006" target="_blank" rel="noopener" class="social-link"
+                    aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:pranav.singh2024@vitstudent.ac.in" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/" target="_blank" rel="noopener" class="social-link"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Introduction</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a passionate <strong>Computer Science Engineering</strong> student at
+                        <strong>VIT Vellore</strong>, driven by curiosity and a love for building
+                        things that live on the internet.
+                    </p>
+                    <p>
+                        My journey in tech started with simple HTML pages and has since evolved
+                        into exploring full-stack development, data structures, and algorithms.
+                        I believe in writing clean, efficient code and creating meaningful digital
+                        experiences.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies,
+                        contributing to open-source projects, or diving into competitive programming
+                        challenges.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years Learning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-details">
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-user"></i></div>
+                        <div>
+                            <span class="detail-label">Name</span>
+                            <span class="detail-value">Pranav Singh</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">Vellore, Tamil Nadu</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <span class="detail-label">Degree</span>
+                            <span class="detail-value">B.Tech CSE</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div>
+                            <span class="detail-label">Expected Graduation</span>
+                            <span class="detail-value">2028</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section class="section section--alt" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic Journey</span>
+                <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge">2024 – 2028</div>
+                        <h3>B.Tech in Computer Science & Engineering</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-university"></i> VIT Vellore, Tamil Nadu
+                        </p>
+                        <p>Pursuing core computer science with specialization in software development. Coursework
+                            includes Data Structures, Web Programming, Object-Oriented Programming, and Database
+                            Management Systems.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">DSA</span>
+                            <span class="tag">Web Dev</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">DBMS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge">2022 – 2024</div>
+                        <h3>Senior Secondary Education (Class XII)</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-school"></i> CBSE Board
+                        </p>
+                        <p>Completed senior secondary education with a focus on Physics, Chemistry, and Mathematics.
+                            Developed a strong foundation in analytical thinking and problem-solving.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">PCM</span>
+                            <span class="tag">CBSE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge">2018 – 2022</div>
+                        <h3>Secondary Education (Class X)</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-school"></i> CBSE Board
+                        </p>
+                        <p>Completed secondary education with strong academic performance. First exposure to programming
+                            through basic computer science courses.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Science</span>
+                            <span class="tag">Mathematics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper skill-icon--frontend">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5" style="color: #e34c26;"></i>
+                            <span>HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                            <span>CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js" style="color: #f7df1e;"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-bootstrap" style="color: #7952b3;"></i>
+                            <span>Bootstrap</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper skill-icon--backend">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-python" style="color: #3776ab;"></i>
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java" style="color: #f89820;"></i>
+                            <span>Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-copyright" style="color: #a8b9cc;"></i>
+                            <span>C / C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper skill-icon--tools">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt" style="color: #f05032;"></i>
+                            <span>Git & GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal" style="color: #4ec9b0;"></i>
+                            <span>VS Code</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux" style="color: #fcc624;"></i>
+                            <span>Linux</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="55"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="section section--alt" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/pranav-singh2006" target="_blank" class="project-link"
+                                aria-label="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>A responsive, modern portfolio website built with HTML, CSS, and JavaScript featuring
+                            glassmorphism design, smooth animations, and dark theme.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/pranav-singh2006" target="_blank" class="project-link"
+                                aria-label="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Grade Calculator</h3>
+                        <p>An interactive grade calculator application that computes averages and letter grades with a
+                            clean user interface, input validation, and real-time feedback.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/pranav-singh2006" target="_blank" class="project-link"
+                                aria-label="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Pathfinding Visualizer</h3>
+                        <p>Interactive visualization tool for shortest path algorithms including Dijkstra's and A*.
+                            Features step-by-step animation and grid customization.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/pranav-singh2006" target="_blank" class="project-link"
+                                aria-label="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CrushIt – Deadline Tracker</h3>
+                        <p>A deadline management web app that helps students track assignments, set priorities, and
+                            receive timely reminders for upcoming deadlines.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS SECTION ===== -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Milestones</span>
+                <h2 class="section-title">Achievements & <span class="gradient-text">Certifications</span></h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>JEE Mains Qualified</h3>
+                    <p>Successfully appeared for and qualified JEE Mains examination, securing admission to VIT Vellore.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>NPTEL Certification</h3>
+                    <p>Completed NPTEL courses in Programming and Data Structures, enhancing foundational CS knowledge.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Hackathon Participation</h3>
+                    <p>Participated in intra-college hackathons, collaborating with teams to build innovative solutions
+                        within 24 hours.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                    <h3>Academic Excellence</h3>
+                    <p>Maintained strong academic performance throughout coursework with consistent results in core
+                        subjects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOBBIES SECTION ===== -->
+    <section class="section section--alt" id="hobbies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Beyond Code</span>
+                <h2 class="section-title">Hobbies & <span class="gradient-text">Interests</span></h2>
+            </div>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-emoji">🎮</div>
+                    <h3>Gaming</h3>
+                    <p>Strategy and puzzle games that sharpen problem-solving skills.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-emoji">📚</div>
+                    <h3>Reading</h3>
+                    <p>Tech blogs, sci-fi novels, and self-improvement literature.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-emoji">🏋️</div>
+                    <h3>Fitness</h3>
+                    <p>Regular workouts to maintain a healthy body and clear mind.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-emoji">🎵</div>
+                    <h3>Music</h3>
+                    <p>Listening to diverse genres while coding and relaxing.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-emoji">✈️</div>
+                    <h3>Exploring</h3>
+                    <p>Discovering new places, cultures, and cuisines.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-emoji">💡</div>
+                    <h3>Tinkering</h3>
+                    <p>Experimenting with new tools, APIs, and side projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reach Out</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Feel free to reach out for collaborations, opportunities, or just a friendly
+                    hello!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-cards">
+                    <a href="mailto:pranav.singh2006@vitstudent.ac.in" class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email</h3>
+                        <p>pranav.singh2006@vitstudent.ac.in</p>
+                    </a>
+                    <a href="https://github.com/pranav-singh2006" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+                        <h3>GitHub</h3>
+                        <p>github.com/pranav-singh2006</p>
+                    </a>
+                    <a href="https://linkedin.com/in/" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me</p>
+                    </a>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Location</h3>
+                        <p>VIT Vellore, Tamil Nadu, India</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="formName" placeholder=" " required>
+                        <label for="formName">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="formEmail" placeholder=" " required>
+                        <label for="formEmail">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="formSubject" placeholder=" ">
+                        <label for="formSubject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="formMessage" rows="5" placeholder=" " required></textarea>
+                        <label for="formMessage">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <span class="logo-bracket">&lt;</span>PS<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Designed & Built by Pranav Singh</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/pranav-singh2006" target="_blank" rel="noopener"><i
+                            class="fab fa-github"></i></a>
+                    <a href="mailto:pranav.singh2006@vitstudent.ac.in"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/" target="_blank" rel="noopener"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pranav Singh. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

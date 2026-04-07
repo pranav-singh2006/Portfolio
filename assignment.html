@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Assignment - BCSE203E Web Programming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #475569;
+            --accent: #6366f1;
+            --accent-light: #eef2ff;
+            --border: #e2e8f0;
+            --code-bg: #1e1e2e;
+            --code-text: #cdd6f4;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.8; background: var(--bg); }
+        .page { max-width: 800px; margin: 0 auto; padding: 60px 40px; }
+        .page-break { page-break-after: always; border-bottom: 2px dashed var(--border); margin: 60px 0; padding-bottom: 60px; }
+
+        /* Cover Page */
+        .cover { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 90vh; }
+        .cover-logo { font-size: 3rem; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
+        .cover h1 { font-size: 2rem; font-weight: 800; margin: 20px 0 8px; }
+        .cover h2 { font-size: 1.2rem; font-weight: 600; color: var(--accent); margin-bottom: 40px; }
+        .cover-details { text-align: left; background: var(--accent-light); padding: 28px 36px; border-radius: 12px; border-left: 4px solid var(--accent); }
+        .cover-details p { margin: 6px 0; font-size: 1rem; }
+        .cover-details strong { min-width: 180px; display: inline-block; }
+
+        /* Links Page */
+        .links-section { background: var(--accent-light); padding: 32px; border-radius: 12px; margin: 20px 0; }
+        .links-section h3 { color: var(--accent); margin-bottom: 12px; }
+        .links-section a { color: var(--accent); word-break: break-all; font-weight: 600; }
+
+        /* TOC */
+        .toc-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dotted var(--border); font-size: 0.95rem; }
+        .toc-item:hover { background: var(--accent-light); padding-left: 8px; border-radius: 4px; }
+        .toc-num { color: var(--accent); font-weight: 700; margin-right: 12px; }
+
+        /* Section Headers */
+        h2 { font-size: 1.6rem; font-weight: 800; color: var(--accent); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+        h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; }
+        h4 { font-size: 1rem; font-weight: 600; margin: 16px 0 8px; }
+        p { margin: 10px 0; color: var(--text-secondary); }
+
+        /* Code blocks */
+        pre { background: var(--code-bg); color: var(--code-text); padding: 20px; border-radius: 10px; overflow-x: auto; margin: 16px 0; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.6; }
+        code { font-family: 'JetBrains Mono', monospace; background: var(--accent-light); padding: 2px 6px; border-radius: 4px; font-size: 0.88rem; color: var(--accent); }
+        pre code { background: none; padding: 0; color: inherit; }
+
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+        th { background: var(--accent); color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+        td { padding: 10px 16px; border-bottom: 1px solid var(--border); }
+        tr:hover { background: var(--accent-light); }
+
+        /* Lists */
+        ul, ol { margin: 10px 0 10px 20px; color: var(--text-secondary); }
+        li { margin: 6px 0; }
+
+        /* Insight cards */
+        .insight { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .insight-num { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+        .insight h4 { margin: 4px 0 6px; color: var(--text); }
+        .insight p { margin: 0; font-size: 0.92rem; }
+
+        /* Screenshot placeholder */
+        .screenshot { background: linear-gradient(135deg, #eef2ff, #e0e7ff); border: 2px dashed var(--accent); border-radius: 12px; padding: 40px; text-align: center; margin: 16px 0; color: var(--accent); font-weight: 600; }
+
+        @media print { .page { padding: 20px; } .page-break { page-break-after: always; } }
+        @media (max-width: 600px) { .page { padding: 24px 16px; } h2 { font-size: 1.3rem; } }
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="page">
+    <div class="cover">
+        <div class="cover-logo">VIT</div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">Vellore Institute of Technology, Vellore</p>
+        <h1>Digital Assignment</h1>
+        <h2>BCSE203E — Web Programming<br>Winter Semester 2025–2026</h2>
+        <div class="cover-details">
+            <p><strong>Student Name:</strong> Pranav Singh</p>
+            <p><strong>Registration No.:</strong> [Your Reg. No.]</p>
+            <p><strong>Course Code:</strong> BCSE203E</p>
+            <p><strong>Course Title:</strong> Web Programming</p>
+            <p><strong>Faculty:</strong> [Faculty Name]</p>
+            <p><strong>Slot:</strong> [Your Slot]</p>
+            <p><strong>Date:</strong> April 2026</p>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+<!-- ==================== PAGE 2: LINKS ==================== -->
+    <h2>GitHub & Deployment Links</h2>
+    <div class="links-section">
+        <h3>🔗 GitHub Repository</h3>
+        <a href="https://github.com/pranav-singh2006/portfolio" target="_blank">https://github.com/pranav-singh2006/portfolio</a>
+    </div>
+    <div class="links-section">
+        <h3>🌐 Live Website (GitHub Pages)</h3>
+        <a href="https://pranav-singh2006.github.io/portfolio/" target="_blank">https://pranav-singh2006.github.io/portfolio/</a>
+    </div>
+    <div class="page-break"></div>
+
+<!-- ==================== PAGE 3: TABLE OF CONTENTS ==================== -->
+    <h2>Table of Contents</h2>
+    <div class="toc-item"><span><span class="toc-num">1.</span> Introduction & Objective</span></div>
+    <div class="toc-item"><span><span class="toc-num">2.</span> Tools & Technologies Used</span></div>
+    <div class="toc-item"><span><span class="toc-num">3.</span> Design Choices</span></div>
+    <div class="toc-item"><span><span class="toc-num">4.</span> Step-by-Step Development Documentation</span></div>
+    <div class="toc-item"><span><span class="toc-num">5.</span> Version Control with GitHub</span></div>
+    <div class="toc-item"><span><span class="toc-num">6.</span> Challenges Faced & Solutions</span></div>
+    <div class="toc-item"><span><span class="toc-num">7.</span> Deployment on GitHub Pages</span></div>
+    <div class="toc-item"><span><span class="toc-num">8.</span> 10 Key Learning Insights</span></div>
+    <div class="toc-item"><span><span class="toc-num">9.</span> Importance of a Personal Webpage — Reflection Essay</span></div>
+    <div class="toc-item"><span><span class="toc-num">10.</span> Screenshots</span></div>
+    <div class="toc-item"><span><span class="toc-num">11.</span> Conclusion</span></div>
+    <div class="page-break"></div>
+
+<!-- ==================== SECTION 1 ==================== -->
+    <h2>1. Introduction & Objective</h2>
+    <p>This digital assignment focuses on building a personal portfolio webpage from scratch using core web technologies — HTML5, CSS3, and JavaScript. The project demonstrates practical understanding of front-end web development, responsive design, version control using Git and GitHub, and deployment via GitHub Pages.</p>
+    <p>The objective is to create a visually appealing, responsive, and well-structured personal website that serves as a digital portfolio showcasing education, skills, projects, and contact information. The process is documented in detail, reflecting the complete lifecycle of a web development project.</p>
+
+<!-- ==================== SECTION 2 ==================== -->
+    <h2>2. Tools & Technologies Used</h2>
+    <table>
+        <tr><th>Category</th><th>Tool / Technology</th><th>Purpose</th></tr>
+        <tr><td>Code Editor</td><td>Visual Studio Code</td><td>Writing HTML, CSS, and JavaScript</td></tr>
+        <tr><td>Markup</td><td>HTML5</td><td>Page structure using semantic elements</td></tr>
+        <tr><td>Styling</td><td>CSS3 (Vanilla)</td><td>Layout, animations, responsiveness</td></tr>
+        <tr><td>Scripting</td><td>JavaScript (ES6+)</td><td>Interactivity, scroll animations, form handling</td></tr>
+        <tr><td>Icons</td><td>Font Awesome 6</td><td>UI icons for sections and links</td></tr>
+        <tr><td>Fonts</td><td>Google Fonts (Inter, JetBrains Mono)</td><td>Typography</td></tr>
+        <tr><td>Version Control</td><td>Git</td><td>Tracking code changes</td></tr>
+        <tr><td>Repository Hosting</td><td>GitHub</td><td>Remote repository and collaboration</td></tr>
+        <tr><td>Deployment</td><td>GitHub Pages</td><td>Free static site hosting</td></tr>
+        <tr><td>Browser</td><td>Google Chrome</td><td>Testing and debugging with DevTools</td></tr>
+    </table>
+
+<!-- ==================== SECTION 3 ==================== -->
+    <h2>3. Design Choices</h2>
+    <h3>3.1 Color Scheme</h3>
+    <table>
+        <tr><th>Element</th><th>Color</th><th>Hex Code</th></tr>
+        <tr><td>Background (Primary)</td><td>Deep Dark</td><td>#0a0a0f</td></tr>
+        <tr><td>Background (Secondary)</td><td>Dark Charcoal</td><td>#111118</td></tr>
+        <tr><td>Accent (Primary)</td><td>Indigo</td><td>#6366f1</td></tr>
+        <tr><td>Accent (Secondary)</td><td>Purple</td><td>#8b5cf6</td></tr>
+        <tr><td>Accent (Tertiary)</td><td>Lavender</td><td>#a78bfa</td></tr>
+        <tr><td>Text (Primary)</td><td>Off-White</td><td>#f1f5f9</td></tr>
+        <tr><td>Text (Secondary)</td><td>Slate</td><td>#94a3b8</td></tr>
+    </table>
+    <p>A dark theme was chosen because it reduces eye strain, looks modern and premium, and provides excellent contrast for gradient accent colors. The indigo-to-lavender gradient adds energy and personality.</p>
+
+    <h3>3.2 Layout & Design Philosophy</h3>
+    <ul>
+        <li><strong>Glassmorphism:</strong> Semi-transparent card backgrounds with subtle backdrop blur create depth and a contemporary look.</li>
+        <li><strong>Single-page layout:</strong> All sections on one page with smooth scrolling for seamless navigation.</li>
+        <li><strong>CSS Grid & Flexbox:</strong> Used for responsive, flexible layouts across all sections.</li>
+        <li><strong>Micro-animations:</strong> Hover effects, scroll reveals, typing effect, and parallax orbs add interactivity.</li>
+        <li><strong>Mobile-first approach:</strong> Responsive breakpoints at 968px, 768px, and 480px ensure usability across all devices.</li>
+    </ul>
+
+    <h3>3.3 Typography</h3>
+    <ul>
+        <li><strong>Inter:</strong> Primary font for headings and body text — clean, modern sans-serif optimized for screens.</li>
+        <li><strong>JetBrains Mono:</strong> Used for the logo and code-style badges — adds a developer aesthetic.</li>
+    </ul>
+
+<!-- ==================== SECTION 4 ==================== -->
+    <h2>4. Step-by-Step Development Documentation</h2>
+
+    <h3>Step 1: Planning & Wireframing</h3>
+    <p>Identified the sections required: Hero, About, Education, Skills, Projects, Achievements, Hobbies, and Contact. Sketched a rough layout with a single-page scrolling design.</p>
+
+    <h3>Step 2: Setting Up the Project</h3>
+    <pre><code>mkdir portfolio
+cd portfolio
+touch index.html style.css script.js</code></pre>
+    <p>Created the project folder and three core files: <code>index.html</code> for structure, <code>style.css</code> for styling, and <code>script.js</code> for interactivity.</p>
+
+    <h3>Step 3: Building the HTML Structure</h3>
+    <p>Used semantic HTML5 elements throughout:</p>
+    <ul>
+        <li><code>&lt;nav&gt;</code> — Navigation bar with links to each section</li>
+        <li><code>&lt;section&gt;</code> — Each content area (About, Education, Skills, etc.)</li>
+        <li><code>&lt;header&gt;</code> — Hero section with name, tagline, and CTA buttons</li>
+        <li><code>&lt;footer&gt;</code> — Copyright and social links</li>
+        <li><code>&lt;form&gt;</code> — Contact form with proper labels and input types</li>
+        <li><code>&lt;article&gt;</code> style cards for projects and achievements</li>
+    </ul>
+    <p>Added SEO meta tags: <code>description</code>, <code>keywords</code>, <code>author</code>, and <code>viewport</code> for responsiveness.</p>
+
+    <h3>Step 4: CSS Styling & Design System</h3>
+    <p>Created a CSS custom properties (variables) system for consistent theming:</p>
+    <pre><code>:root {
+    --bg-primary: #0a0a0f;
+    --accent-1: #6366f1;
+    --accent-2: #8b5cf6;
+    --gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    --text-primary: #f1f5f9;
+    --transition-base: 0.3s ease;
+}</code></pre>
+    <p>Key CSS techniques used:</p>
+    <ul>
+        <li>CSS Grid for About, Skills, Projects, and Contact layouts</li>
+        <li>Flexbox for navigation, buttons, and alignment</li>
+        <li><code>backdrop-filter: blur()</code> for glassmorphism cards</li>
+        <li><code>@keyframes</code> for orb floating, scroll wheel, and fade-in animations</li>
+        <li>Media queries at 3 breakpoints for mobile responsiveness</li>
+        <li><code>clamp()</code> for fluid typography</li>
+    </ul>
+
+    <h3>Step 5: JavaScript Interactivity</h3>
+    <p>Added the following JS features:</p>
+    <ul>
+        <li><strong>Mobile hamburger menu:</strong> Toggle navigation with smooth slide-in panel</li>
+        <li><strong>Scroll-based navbar:</strong> Adds background blur and shadow when scrolled past 50px</li>
+        <li><strong>Intersection Observer:</strong> Triggers fade-in animations and skill bar fills when elements enter viewport</li>
+        <li><strong>Counter animation:</strong> Animates stat numbers counting up from 0</li>
+        <li><strong>Parallax orbs:</strong> Hero background orbs follow mouse movement</li>
+        <li><strong>Typing effect:</strong> Hero greeting text types out character by character</li>
+        <li><strong>Contact form handler:</strong> Shows success confirmation on submit</li>
+    </ul>
+
+    <h3>Step 6: Responsiveness Testing</h3>
+    <p>Tested across multiple screen sizes using Chrome DevTools Device Mode:</p>
+    <table>
+        <tr><th>Device</th><th>Width</th><th>Status</th></tr>
+        <tr><td>Desktop</td><td>1440px+</td><td>✅ Fully functional</td></tr>
+        <tr><td>Laptop</td><td>1024px</td><td>✅ Fully functional</td></tr>
+        <tr><td>Tablet</td><td>768px</td><td>✅ Responsive layout</td></tr>
+        <tr><td>Mobile</td><td>375px</td><td>✅ Mobile menu active</td></tr>
+    </table>
+
+<!-- ==================== SECTION 5 ==================== -->
+    <h2>5. Version Control with GitHub</h2>
+    <h3>5.1 Initializing the Repository</h3>
+    <pre><code># Step 1: Initialize Git in the project directory
+git init
+
+# Step 2: Stage all files
+git add .
+
+# Step 3: Make the first commit
+git commit -m "Initial commit: Add portfolio HTML structure"
+
+# Step 4: Create remote repository on GitHub and link it
+git remote add origin https://github.com/pranav-singh2006/portfolio.git
+
+# Step 5: Push to GitHub
+git branch -M main
+git push -u origin main</code></pre>
+
+    <h3>5.2 Commit History (Meaningful Messages)</h3>
+    <table>
+        <tr><th>#</th><th>Commit Message</th><th>Description</th></tr>
+        <tr><td>1</td><td><code>Initial commit: Add portfolio HTML structure</code></td><td>Added index.html with all semantic sections</td></tr>
+        <tr><td>2</td><td><code>Add CSS design system with dark theme variables</code></td><td>Created style.css with custom properties and base styles</td></tr>
+        <tr><td>3</td><td><code>Style hero section with gradient orbs and animations</code></td><td>Added hero styling, orb animations, and typing effect</td></tr>
+        <tr><td>4</td><td><code>Add education timeline and skills grid layouts</code></td><td>Styled education timeline cards and skill bars</td></tr>
+        <tr><td>5</td><td><code>Style projects, achievements, and hobbies sections</code></td><td>Added card layouts with hover effects</td></tr>
+        <tr><td>6</td><td><code>Add contact form and footer styling</code></td><td>Styled contact grid, form inputs, and footer</td></tr>
+        <tr><td>7</td><td><code>Add JavaScript: navigation, scroll animations, counters</code></td><td>Implemented all interactive features</td></tr>
+        <tr><td>8</td><td><code>Add responsive breakpoints for mobile and tablet</code></td><td>Media queries for 968px, 768px, and 480px</td></tr>
+        <tr><td>9</td><td><code>Final polish: meta tags, accessibility, and cleanup</code></td><td>Added SEO meta tags and ARIA labels</td></tr>
+    </table>
+
+    <h3>5.3 Repository Link</h3>
+    <div class="links-section">
+        <a href="https://github.com/pranav-singh2006/portfolio" target="_blank">https://github.com/pranav-singh2006/portfolio</a>
+    </div>
+
+<!-- ==================== SECTION 6 ==================== -->
+    <h2>6. Challenges Faced & Solutions</h2>
+    <table>
+        <tr><th>Challenge</th><th>Solution Applied</th></tr>
+        <tr><td>Glassmorphism not working in older browsers</td><td>Used <code>@supports</code> to provide fallback styling and tested across browsers</td></tr>
+        <tr><td>Mobile navigation overlay not closing on link click</td><td>Added event listeners on each nav-link to toggle the menu closed</td></tr>
+        <tr><td>Skill bars animating before visible on screen</td><td>Used Intersection Observer API to trigger animations only when they enter the viewport</td></tr>
+        <tr><td>Hero text sizing breaking on small screens</td><td>Used <code>clamp()</code> function for fluid, responsive typography</td></tr>
+        <tr><td>Contact form label overlapping input text</td><td>Used CSS <code>:not(:placeholder-shown)</code> pseudo-class for floating label effect</td></tr>
+        <tr><td>Scroll animations firing too early</td><td>Added <code>rootMargin</code> offset in Intersection Observer options</td></tr>
+    </table>
+
+<!-- ==================== SECTION 7 ==================== -->
+    <h2>7. Deployment on GitHub Pages</h2>
+    <h3>Steps to Deploy:</h3>
+    <ol>
+        <li>Ensure the repository has all files pushed to the <code>main</code> branch</li>
+        <li>Go to repository <strong>Settings → Pages</strong></li>
+        <li>Under "Source", select <strong>Deploy from a branch</strong></li>
+        <li>Choose <strong>main</strong> branch and <strong>/ (root)</strong> folder</li>
+        <li>Click <strong>Save</strong></li>
+        <li>Wait 1–2 minutes for deployment</li>
+        <li>Access site at: <code>https://pranav-singh2006.github.io/portfolio/</code></li>
+    </ol>
+    <div class="screenshot">📸 Screenshot: GitHub Pages Settings — [Insert Screenshot Here]</div>
+
+<!-- ==================== SECTION 8 ==================== -->
+    <h2>8. 10 Key Learning Insights</h2>
+
+    <div class="insight">
+        <span class="insight-num">Insight 1</span>
+        <h4>Web Design Is About User Experience, Not Just Aesthetics</h4>
+        <p>A website must not only look good, but also be functional. Through this project, I learned that design decisions — from color contrast to button sizes — directly affect how users interact with a site. The decision to use a dark theme was not just a stylistic choice; it genuinely improves readability during prolonged browsing sessions. Good design is invisible; when the user can navigate effortlessly, the design has done its job.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 2</span>
+        <h4>Semantic HTML Gives Structure and Meaning</h4>
+        <p>Using elements like <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>, and <code>&lt;form&gt;</code> rather than generic <code>&lt;div&gt;</code> tags makes the HTML readable by both browsers and developers. Semantic HTML improves accessibility for screen readers, boosts SEO ranking, and makes the codebase far easier to maintain. This project drilled the habit of always choosing the right element for the right purpose.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 3</span>
+        <h4>CSS Custom Properties Enable Scalable Design Systems</h4>
+        <p>Instead of hard-coding colors and sizes throughout the stylesheet, I used CSS variables (<code>:root</code> custom properties). Changing the entire color scheme required editing only a few lines at the top of the file. This approach mirrors how professional design systems work — tokens that centralize styling decisions. I also learned how <code>clamp()</code> makes typography fluid without multiple media queries.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 4</span>
+        <h4>Responsive Design Requires Thinking in Breakpoints</h4>
+        <p>Building a page that works on a 1440px monitor and a 375px phone required a shift in mindset. Using CSS Grid and Flexbox together gave me flexible layouts that adapt naturally. Media queries at 968px, 768px, and 480px handled the edge cases. The key lesson: design for content flow, not for specific devices. Content dictates when a breakpoint is needed, not a device model.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 5</span>
+        <h4>Browser DevTools Are an Essential Debugging Partner</h4>
+        <p>Chrome DevTools became my most used tool. The Elements panel helped me see the computed CSS in real-time, the Console caught JavaScript errors instantly, and the Device toolbar let me simulate different screen sizes. I learned to use the Performance and Network tabs to check for bottlenecks. Debugging is not a chore — it is a core skill.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 6</span>
+        <h4>Git Version Control Provides a Safety Net</h4>
+        <p>Using Git commits at every logical milestone meant I could always roll back if something broke. Writing meaningful commit messages forced me to think about what I was actually changing. The workflow of <code>git add → git commit → git push</code> became second nature. I also learned the importance of branching for experimental features, though this project stayed on a single main branch for simplicity.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 7</span>
+        <h4>Problem-Solving Means Breaking Problems Into Smaller Pieces</h4>
+        <p>When the mobile navigation was not functioning properly, I did not try to fix everything at once. I isolated the CSS, then the JavaScript event listeners, then tested on different devices. Each problem was broken into sub-problems. This decomposition approach — inherited from algorithmic thinking — is the most transferable skill from this project.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 8</span>
+        <h4>Clean Code Is Written for Humans, Not Machines</h4>
+        <p>I structured my CSS with clear section comments, used descriptive class names like <code>.skill-category-header</code> instead of <code>.sch</code>, and kept JavaScript functions focused on a single responsibility. When I revisited code I had written days earlier, good naming made it immediately understandable. Code is read far more times than it is written; clarity is a form of kindness.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 9</span>
+        <h4>Documentation Crystallizes Understanding</h4>
+        <p>Writing this documentation forced me to articulate decisions I had made intuitively. Why did I choose Intersection Observer over scroll event listeners? Because it is more performant and does not fire on every pixel scrolled. Why CSS Grid over float-based layouts? Because Grid was built for two-dimensional layouts. Documenting is not just record-keeping; it is a tool for deeper learning.</p>
+    </div>
+
+    <div class="insight">
+        <span class="insight-num">Insight 10</span>
+        <h4>Deployment Transforms a Project Into a Product</h4>
+        <p>Until the site was live on GitHub Pages, it was just files on my laptop. Deploying it made it real — accessible to anyone with a link. I learned the deployment pipeline: pushing to a branch, configuring GitHub Pages, and waiting for the build. The notion that something I built is now live on the internet is genuinely motivating. It shifted my perspective from "completing assignments" to "shipping products."</p>
+    </div>
+
+<!-- ==================== SECTION 9 ==================== -->
+    <h2>9. Importance of a Personal Webpage — Reflection Essay</h2>
+
+    <h3>Why a Personal Webpage Matters in the Digital Age</h3>
+
+    <p>We live in an era where your online presence often precedes your physical one. Before a recruiter meets you, they search for you. Before a collaborator reaches out, they look you up. In this landscape, a personal webpage is not a luxury — it is a fundamental tool for professional survival and growth.</p>
+
+    <p>A personal webpage serves as your digital identity card. Unlike social media profiles that are constrained by platform templates, a personal website offers complete freedom of expression. You choose the layout, the colors, the content, and the narrative. It becomes a direct reflection of who you are — not filtered through an algorithm or a character limit. For a computer science student, this is doubly important: the website itself becomes a demonstration of your technical capability. The medium is the message.</p>
+
+    <p>Professional branding is one of the most significant benefits. In a competitive job market, students with similar GPAs and coursework need differentiators. A portfolio website showcases not just what you have learned, but how you apply it. Recruiters spend an average of six seconds on a resume, but a well-designed website invites them to stay longer, explore projects, and understand your thought process. It moves the conversation from credentials to capabilities.</p>
+
+    <p>The ease of sharing a portfolio cannot be overstated. Instead of attaching a 5-page PDF resume to an email, you share a single link. That link works on any device, at any time, from anywhere in the world. It can be embedded in LinkedIn profiles, email signatures, business cards, and even QR codes. It is always up to date, always accessible, always representing the latest version of you.</p>
+
+    <p>Credibility is another critical dimension. When someone visits your personal site and sees polished design, working projects, and clear writing, they immediately assign a higher level of trust. A GitHub profile with green contribution squares is good; a deployed, functional website is better. It proves you can take an idea from concept to production — a skill that every employer values.</p>
+
+    <p>Beyond career utility, a personal webpage is a learning canvas. Every time I updated this portfolio, I learned something new: a CSS trick, a JavaScript pattern, a design principle. The website is never truly finished; it evolves as I evolve. This continuous iteration mirrors the agile development philosophy — ship early, improve constantly, and let user feedback guide your decisions.</p>
+
+    <p>In conclusion, a personal webpage is not just a digital assignment requirement — it is an investment in your future self. It builds technical skills, establishes professional credibility, simplifies portfolio sharing, and creates a lasting digital presence. In a world that is increasingly online, having your own corner of the internet is not optional; it is essential.</p>
+
+<!-- ==================== SECTION 10 ==================== -->
+    <h2>10. Screenshots</h2>
+
+    <h3>10.1 Hero Section</h3>
+    <div class="screenshot">📸 Screenshot: Hero Section showing name, tagline, CTA buttons, and animated background orbs</div>
+
+    <h3>10.2 About Me Section</h3>
+    <div class="screenshot">📸 Screenshot: About section with bio text, stats counters, and detail cards</div>
+
+    <h3>10.3 Education Timeline</h3>
+    <div class="screenshot">📸 Screenshot: Education timeline with chronological cards</div>
+
+    <h3>10.4 Skills Section</h3>
+    <div class="screenshot">📸 Screenshot: Skills grid with animated progress bars</div>
+
+    <h3>10.5 Projects Grid</h3>
+    <div class="screenshot">📸 Screenshot: Project cards with hover overlay effects</div>
+
+    <h3>10.6 Achievements & Hobbies</h3>
+    <div class="screenshot">📸 Screenshot: Achievement and hobby cards</div>
+
+    <h3>10.7 Contact Section</h3>
+    <div class="screenshot">📸 Screenshot: Contact cards and form with floating labels</div>
+
+    <h3>10.8 Mobile Responsive View</h3>
+    <div class="screenshot">📸 Screenshot: Mobile view showing hamburger menu and stacked layout</div>
+
+    <h3>10.9 GitHub Repository</h3>
+    <div class="screenshot">📸 Screenshot: GitHub repository page showing commit history</div>
+
+    <h3>10.10 GitHub Pages Deployment</h3>
+    <div class="screenshot">📸 Screenshot: GitHub Pages settings showing active deployment</div>
+
+<!-- ==================== SECTION 11 ==================== -->
+    <h2>11. Conclusion</h2>
+    <p>This digital assignment provided a hands-on experience in building a complete personal portfolio website from scratch. The project covered the full web development lifecycle — planning, designing, coding, testing, version controlling, documenting, and deploying. Each phase reinforced theoretical concepts learned in the BCSE203E Web Programming course with practical application.</p>
+    <p>The portfolio website at <a href="https://pranav-singh2006.github.io/portfolio/" style="color: var(--accent);">https://pranav-singh2006.github.io/portfolio/</a> demonstrates proficiency in HTML5 semantic structure, CSS3 modern styling techniques, JavaScript DOM manipulation, responsive design principles, and GitHub-based version control and deployment. The project serves as both a technical demonstration and a living portfolio that will continue to grow throughout my academic and professional career.</p>
+
+    <div style="text-align: center; margin-top: 60px; padding: 40px; border-top: 2px solid var(--border);">
+        <p style="font-weight: 700; color: var(--text); font-size: 1.1rem;">— End of Assignment —</p>
+        <p style="color: var(--text-secondary);">Pranav Singh | BCSE203E Web Programming | Winter 2025–2026</p>
+    </div>
+
+</div>
+
+</body>
+</html>
